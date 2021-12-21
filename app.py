@@ -9,4 +9,3 @@ def homepage():
     return "hi "
 =======
     return "new line"
->>>>>>> 74ceb66ed163901afcdb835d5a357bbc9a91be31
