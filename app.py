@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 <<<<<<< HEAD
-    return "hello github "
+    return "site web "
 =======
    
 
