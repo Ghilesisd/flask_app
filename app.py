@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route('/')
 
 def homepage():
-    return "test"
     return "hello vs code"
     return render_template("base.html")
 
