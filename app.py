@@ -4,11 +4,10 @@ app = Flask(__name__)
 
 
 @app.route('/')
+
 def homepage():
-<<<<<<< HEAD
-    return "site web "
-=======
-   
 
+    return render_template("base.html")
 
-    return "new test "
+if __name__ == '__main__':
+    app.run(debug=True)
