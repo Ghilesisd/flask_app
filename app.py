@@ -9,5 +9,8 @@ def homepage():
     return "hello vs code"
     return render_template("base.html")
 
+def hello(:
+    return "hello")
+
 if __name__ == '__main__':
     app.run(debug=True)
