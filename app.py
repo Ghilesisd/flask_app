@@ -61,6 +61,9 @@ def homepage():
 
 
 
+def hello():
+        return "hello"
+
 if __name__ == '__main__':
     
     
