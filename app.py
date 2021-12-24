@@ -11,6 +11,7 @@ def homepage():
 
 def hello():
         return "hello"
-
+def engister()
+        return "enregister"
 if __name__ == '__main__':
     app.run(debug=True)
