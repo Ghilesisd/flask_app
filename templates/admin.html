@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script>
+            if ( window.history.replaceState ) {
+              window.history.replaceState( null, null, window.location.href );
+            }
+        </script>
+
+    </head>
+
+
+    <body>
+        <form action="/" method="POST">
+            <h1>AJOUTER UNE FORMATION</h1>
+            <div>
+            TITRE : <input   name="titre"  type="text" placeholder="titre de la formation" />
+        </div>
+        
+        <div>
+           CHOISIR UNE CATEGORIE :  <select name="Categorie">
+                <option value="">Choisir une categorie</option>
+                <option value="Developpement Web">Developpement Web</option>
+                <option value="Developpement mobile">Developpement mobile</option>
+                <option value="Desktop Developpement">Desktop Developpement</option>
+            </select>
+            </div>
+        <div>
+            DONNER UNE COURTE DESCRIPTION : <textarea name="desc_courte" id="" cols="30" rows="10" placeholder="Une courte description"></textarea>
+        </div>
+        <div>
+            DONNER UNE  DESCRIPTION DETAILLEE : <textarea name="desc_long" id="" cols="30" rows="10" placeholder="Une description détaillée"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn"/>
+            <p>{{titre}}</p>
+        </div>
+
+        </form>
+
+
+
+    </body>
+</html>

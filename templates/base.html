@@ -5,6 +5,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<script>
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+</script>
     </head>
 
 
@@ -41,18 +46,36 @@
         
 
         </section>
-        <section class="formations">
-                <div class="">
-                <h1>Les Formations</h1>
-                <p>Voici un bref descriptif des formations et toute les formations qu'elle propose </p>
-                </div>
-    
-
+        <section class="cards">
+          {% for formation in formations %}
+        
+                <div class="cards">
+  
+                    <div class="card">
+                      <img class="card__image" src="static/java.jpg" alt="">
+                      <div class="card__content">
+                        <h1> {{formation.titredb}}</h1>
+                        <p>
+                            Une description de la formation et de ces composants
+                        </p>
+                      </div>
+                      <div class="card__info">
+                        
+                        <div>
+                          <a href="./" class="card__link">Details</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+            
+            {% endfor %}
+          </section>
 
             
         
 
-        </section>
+      
           
     </body>
 </html>
