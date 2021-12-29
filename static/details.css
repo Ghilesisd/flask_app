@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+   body{
+      font-family: 'Poppins',sans-serif;
+
+    background-image: url(/static/campus.png);
+     position: relative;  
+      background-position:center;
+     background-size:cover;
+     font-family:sans-serif;
+   }
+
+   .container
+   {
+      padding-top: 3%;
+   }
+      .description{
+         background-color: hsla(39, 100%, 93%, 0.8) ;
+         border-radius: 10%;
+         border:rgb(83, 56, 44) solid 2px;
+        
+         padding: 5px 5px;
+         margin:  auto 100px ;
+      
+       
+      }
+      .photo{
+         position: absolute;
+         top: 20%;
+         right:160px ;
+      }
+
+    .desc{
+       margin: 20px 20px;
+       padding: auto;
+       font-size:16px;
+      
+    }
+
+ h1{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(83, 56, 44);
+ }
+   
+ .btn-inscription{
+  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   left: 80%;
+   width: 150px;
+   height: 49px;
+   outline: none;
+   border: none;
+   border-radius: 48px;
+   background-color: #20dbc9;
+   
+   text-transform: uppercase;
+   font-weight: 600;
+   margin: 10px 0;
+   transition: all 0.5s;
+   cursor: pointer;
+}
+.btn-inscription a{
+   color: white;
+}
+
+
+.btn-inscription:hover{
+   background-color: #00bfa6;   
+}
+
+ a{
+    text-decoration: none;
+    color: black;
+    
+ }
+
+
+

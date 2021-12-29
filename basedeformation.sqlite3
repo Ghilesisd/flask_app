@@ -1,0 +1,30 @@
+insert into formation VALUES(1,'HTML','Developpement Web' ,
+'le code utilisé pour écrire des sites Web Apprenez certaines des balises HTML de base et  la structure d’un document HTML ',
+' Chapitre 01 : Les bases d’un site web
+Chapitre 02 : Le HTML – généralités
+Chapitre 03 : La syntaxe HTML : balises, éléments et attributs
+Chapitre 04 : Doctype, html, body : structure d’un document valide
+Chapitre 05 : Les éléments de structuration du contenu 
+Chapitre 06 :  Les éléments de « mise en forme » de texte 
+Chapitre 07 : Les éléments de liste
+Chapitre 08 : Ajouter des images avec la balise <Img>
+Chapitre 09 : Les tableaux HTML
+Chapitre 10 : Les formulaires')
+insert into formation VALUES(2,'CSS','Developpement Web' ,
+'il permet de faire la mise en page de votre site . Découvrez comment CSS est utilisé avec HTML sur un site Web',
+'Chapitre 01 : introduction et notions de base
+Chapitre 02 : où Appliquer un style ?
+Chapitre 03 : Syntaxe CSS
+Chapitre 04 : Généalogie et différents types de Sélecteurs
+Chapitre 05 : Couleurs et unités
+Chapitre 06 : Propriétés de typographie, polices et Puces
+Chapitre 07 : Bordures et arrières plans
+Chapitre 08 : Dimensions, margin et padding
+Chapitre 09 : Positionnement CSS : les flottants pour placer des images
+Chapitre 10 :  Propriété display
+Chapitre 11 : Positionnement CSS relative, absoute et fixed
+')
+
+
+
+
