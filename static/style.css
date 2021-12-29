@@ -1,0 +1,33 @@
+.titre span{
+	color:#fb911f;
+	font-size:100px;
+}
+.titre {
+	font-size:50px;
+	color:white;
+	
+}
+header{
+	background-image:url("/static/imagee.PNG");
+    font-size:50px;
+	color:#2e2768;
+	font-size:50px;
+}
+
+
+.couleur {
+
+	 color:rgb(26, 26, 156);
+	
+}
+li{
+    font-size : 20px;
+	
+}
+table{
+    font-size: 30px;
+}	
+.bordure {
+    margin-left:20px;
+	margin-right:20px;
+}

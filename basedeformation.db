@@ -186,3 +186,18 @@ insert into formation VALUES(9,'C#','Desktop Developpement' ,
   Chapitre 07 : Testez votre application C#
 
 ')   ;
+insert into formation VALUES(10,'GUI','Desktop Developpement' ,
+'Les GUI sont des interfaces graphiques leur but est de restituer le code afin de faciliter le travail',
+'
+  Chapitre 01 : Introduction
+
+ Chapitre 02 : Modele de conception Graphique
+ 
+ Chapitre 03 : Composants d’interface graphique  
+
+ Chapitre 04 : Gestion des evenements 
+
+       *Création d’une application GUI*
+
+
+')   ;

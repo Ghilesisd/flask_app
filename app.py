@@ -96,6 +96,9 @@ def detailspage(formation_titre):
   return render_template("details.html",formations=formations  )
   
 
+@app.route('/apropos')
+def Apropos():
+    return render_template('aproposde.html')
 
 
 
