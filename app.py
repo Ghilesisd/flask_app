@@ -57,12 +57,13 @@ def homepage():
 
     return render_template("base.html",formations=formations)
 
+@app.route('/apropos')
+def Apropos():
+    return render_template('aproposde.html')
 
 
 
 
-def hello():
-        return "hello"
 
 if __name__ == '__main__':
     
