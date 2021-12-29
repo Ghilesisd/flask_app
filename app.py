@@ -3,10 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import insert
 from sqlalchemy.sql.expression import false
 
-from flask_wtf import FlaskForm
-from wtforms import SubmitField,StringField
-from wtforms.fields import form
-from wtforms.validators import Email
 
 
 
@@ -51,11 +47,6 @@ class Inscription(db.Model):
 
 
 
-
-#class inscrpForm(FlaskForm):
- ## name=StringField('Name')
- # email=StringField('Email')
- # submit=SubmitField('inscrire') 
 
 
 @app.route('/admin/', methods=['POST', 'GET'])
