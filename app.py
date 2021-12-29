@@ -50,7 +50,7 @@ def homepage():
        db.session.commit()
    
    
-  #  formations=formation.query.all()
+    formations=formation.query.all()
     
     
 
