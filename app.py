@@ -62,7 +62,7 @@ def homepage():
 
 
 def hello():
-        return "hello"
+        return "hello world"
 
 if __name__ == '__main__':
     
