@@ -7,7 +7,7 @@ from sqlalchemy.sql.expression import false
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:post@localhost:5432/formation"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost:5432/formation"
 db = SQLAlchemy(app)
 
 class formation(db.Model):
@@ -32,6 +32,9 @@ def adminpage():
     
   
     return render_template("admin.html")
+@app.route('/avis')
+def avis():
+     return render_template("avis.html")
 
 @app.route('/' , methods=['POST', 'GET'])
 
@@ -42,14 +45,9 @@ def homepage():
        Categorie=request.form['Categorie']
        desc_courte=request.form['desc_courte']
        desc_long=request.form['desc_long']
-      # print(titre,Categorie,desc_courte,desc_long)
-
-  
        newFormation= formation (titre,Categorie,desc_courte,desc_long)
        db.session.add(newFormation)   
        db.session.commit()
-   
-   
     formations=formation.query.all()
     
     
