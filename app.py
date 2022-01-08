@@ -114,9 +114,6 @@ class aviss(db.Model):
                 self.nom=nom
                 self.Commentaire=Commentaire
 
-@app.route('/avis')
-def avi():
-    return render_template('avis.html')
 
 @app.route('/avis', methods=['POST', 'GET'])
 def avis():
