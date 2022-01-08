@@ -46,9 +46,7 @@ class Inscription(db.Model):
 def adminpage():
     return render_template('admin.html')
 
-@app.route('/')
-def avis():
-     return render_template('base.html')
+
 
 @app.route('/' , methods=['POST', 'GET'])
 
