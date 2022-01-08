@@ -3,17 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import insert
 from sqlalchemy.sql.expression import false
 
-
-
-
-
-
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost:5432/formation"
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost/formation"
-
-
 
 db = SQLAlchemy(app)
 
@@ -48,19 +41,14 @@ class Inscription(db.Model):
                             self.téléphone=téléphone
                             self.formation_insc=formation_insc   
 
-
-
-
-
 @app.route('/admin/', methods=['POST', 'GET'])
 
 def adminpage():
-    
-  
-    return render_template("admin.html")
+    return render_template('admin.html')
+
 @app.route('/')
 def avis():
-     return render_template("base.html")
+     return render_template('base.html')
 
 @app.route('/' , methods=['POST', 'GET'])
 
@@ -79,7 +67,7 @@ def homepage():
        db.session.add(newFormation)   
        db.session.commit()
     formations=formation.query.all()
-    
+
 
 
 
@@ -100,14 +88,6 @@ def detailspage(formation_titre):
 @app.route('/apropos')
 def Apropos():
     return render_template('aproposde.html')
-
-
-
-
-
-
- 
-  
 
 @app.route('/inscription' ,  methods=['POST', 'GET'])
 def inscr():
