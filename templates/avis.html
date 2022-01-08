@@ -13,6 +13,7 @@
       <nav>
          <img src="/static/Image-témoignage logo.png" alt="">
          <h1>Voici quelque temoignages de notre clients sur l'école:</h1>
+         <a href="/">home</a>
       </nav>
    
      
@@ -28,8 +29,8 @@
                 <div class="element ">
                     
                     <div class="caption">
-                        <img src="/static/sonia.jpg" alt="">
-                        <h2>sonia mihoubi 20ans</h2>
+                        
+                        <h2>sonia mihoubi </h2>
                         <p>"Une école magnifique, des cours professionnels au sens propre du terme, un excellent support technique, et franchement, les mots ne peuvent exprimer mes remerciements et ma gratitude au responsable de l'école." </p>
                     </div>
                 </div>
@@ -37,30 +38,33 @@
                <div class="element">
                 
                    <div class="caption">
-                     <img src="/static/prsn.jpg" alt="">
-                     <h2>salim bensalah 24ans</h2>
+                     
+                     <h2>salim bensalah </h2>
                      <p>"L’ecole travaille avec des formateurs ayant un très bon niveau, sans oublier leur souplesse et leur adaptabilité.on était une équipe formidable, je passe mes salutation a mes collegues"</p>
                    </div>
                </div>
-               <!-- Troisième diapo -->
-              <div class="element">
-                
-                  <div class="caption">
-                    <img src="/static/imade benamar.jpg" alt="">
-                    <h2>imad benamar 25ans</h2>
-                    <p>"Une école de formation réactif, compétent et efficace !,La prestation du formateur était excellente. Il est arrivé à l'heure et à gérer la duréé de formation avec beaucoup de professionnalisme. Formation vivante et animée, L'équipe est tout à fait satisfaite...."</p>
-                   </div>
-              </div>
-              <!-- Quatrième diapo -->
-              <div class="element">
-                
-                  <div class="caption">
-                     <img src="/static/selma.jpg" alt="PRSN">
-                     <h2>lamia bennatar 19ans</h2>
-                     <p>" j'ai fait la formation de devlopement web html/css/js et  a la fin de cette formation j'ai pu faire un site vitrine pour ma marque je suis trés contente, merci au professeur ahmed benaissa pour son effort."</p>
-                   </div>
-                </div>
-
+              
+                {% for aviss in  lesavis %}
+              
+                      <div class="element">
+          
+                          <div class="caption">
+                           
+                            
+                              <h2> {{aviss.nom}}</h2>
+                              <p>  {{aviss.Commentaire}} </p>
+                          </div>
+                            
+                                
+                               
+                            
+                      </div>
+                          
+                        
+                  
+                {% endfor %}
+             
+              
                
            </div>
             <!-- Flèches de navigation -->
@@ -72,9 +76,15 @@
             
         </div>
     </main>
-  
+    <div class="btn-cmntr">
+      <a href="/cmntr" > Donnez votre avis</a> 
+    </div>
     
+    
+
      
         <script src="/static/javac.js"></script>
+   
+
    </body>
 </html>

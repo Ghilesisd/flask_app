@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/cmntr.css">
+    <title>Document</title>
+</head>
+<body>
+   <!--barre de navigation-->
+    <nav>
+        <img src="/static/Image-témoignage logo.png" alt="">
+        <h2 class="title"> donnez votre avis !</h2>
+     </nav>
+  
+    <div class="container">
+           
+              <!--formulaire-->
+                   
+                     <form action="/avis" method="POST" class="cmntr-form">
+                        <!--premier champ-->
+                            <div class="input-frm">
+                                    
+                             <label for="nom" > Username</label>
+                             <input type="text" name="nom"  id="nom" required placeholder="nom"> 
+                            </div>
+                        <!--deuxieme champ-->
+                            <div class="input-frm">
+                                <label for="Commentaire" > Commentaire </label>
+                                <textarea name="Commentaire" id="cmntr" cols="30" rows="10" required placeholder="Commentaire"></textarea>
+
+                            </div>
+                        <!--bouton pour partager-->
+                            <input type="submit" actio value="partager" class="btn-cmntr" id="submit">
+                    </form>
+               
+               
+    </div>
+   
+
+
+
+</body>
+</html>

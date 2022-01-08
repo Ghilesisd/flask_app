@@ -6,7 +6,7 @@ from sqlalchemy.sql.expression import false
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost:5432/formation"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost/formation"
+
 
 db = SQLAlchemy(app)
 
@@ -48,7 +48,7 @@ def adminpage():
 
 
 
-@app.route('/' , methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 
 def homepage():
 
@@ -103,6 +103,37 @@ def inscr():
 
   formations=formation.query.all()
   return render_template('inscrp.html',formations=formations )
+class aviss(db.Model):
+    __tablename__ ='avis'
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(20),unique=True)
+    Commentaire = db.Column(db.String(500),unique=True)
+
+
+    def __init__(self,nom,Commentaire):
+                self.nom=nom
+                self.Commentaire=Commentaire
+
+@app.route('/avis')
+def avi():
+    return render_template('avis.html')
+
+@app.route('/avis', methods=['POST', 'GET'])
+def avis():
+        if request.method == 'POST':
+             nom=request.form['nom']
+             Commentaire=request.form['Commentaire']
+             newAvis=aviss(nom,Commentaire)
+             db.session.add(newAvis)
+             db.session.commit()
+        lesavis = aviss.query.all()
+        return render_template('avis.html',lesavis=lesavis)
+
+@app.route('/cmntr')
+
+def commentaire():
+
+    return render_template('cmntr.html')
 
 
 if __name__ == '__main__':

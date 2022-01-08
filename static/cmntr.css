@@ -1,0 +1,75 @@
+body{
+    margin: 0%;
+    background-color: cadetblue;
+}
+nav img{
+    width: 15%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+nav{
+    margin: 0%;
+    padding: 0%;
+    display:flex ;
+    flex-direction: row;
+    background-color: aliceblue;
+    
+}
+
+h2{
+    margin-left: 20%;
+    font-size:x-large;
+    padding-top: 10px;
+}
+
+.input-frm {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+   
+
+}
+.btn-cmntr{
+  margin-left: 40%;
+  margin-bottom: 10%;
+  margin-top: 20PX;
+
+}
+
+
+
+
+
+
+.container{
+    
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    margin-top: 5%;
+    
+}
+.cmntr-form{
+   background-color:aliceblue;
+   padding-left: 90px;
+   padding-top: 10px;
+   width: 60%;
+   margin: auto;
+   border-radius: 20%;
+
+   
+}
+.input-frm label{
+    font-size: larger;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ #nom{
+     width: 40%;
+     border: 2px solid black;
+
+}
+#cmntr{
+    width: 80%;
+    border: 2px solid black;
+}
