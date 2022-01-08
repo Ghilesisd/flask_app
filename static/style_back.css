@@ -261,7 +261,7 @@ html {
 .about {
 	width: 100%;
 	min-height: 50vh;
-	padding: 10rem 5rem;
+	padding: 3rem 5rem;
 	flex-direction: column;
     background-color: #eee;
 }
@@ -291,32 +291,7 @@ html {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.about .about-img {
-	margin-top: 50px;
-	display: block;
-}
-.about .about-img .about-img-wrapper {
-	margin-top: 50px;
-	height: auto;
-	max-width: 400px;
-	position: relative;
-	display: inline-block;
-}
-.about .about-img .about-img-wrapper img {
-	height: 100%;
-	width: 100%;
-}
-.about .about-img .about-img-wrapper::after {
-	position: absolute;
-	content: '';
-	right: -5rem;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 70%;
-	height: 120%;
-	background-color: rgba(34, 33, 33, 0.158);
-	z-index: -1;
-}
+
 /* End About Section  */
 
 .containera{
