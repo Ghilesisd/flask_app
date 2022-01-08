@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>eLearning Site</title>
-        <link rel="stylesheet" href="/static/main.css">
+        <link rel="stylesheet" href="../static/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
@@ -9,16 +9,14 @@
   if ( window.history.replaceState ) {
     window.history.replaceState( null, null, window.location.href );
   }
+
 </script>
     </head>
 
-
     <body>
-       
-          
-   
-
+      
         <section class="header" >
+          
             <nav>
                 <a href="/"> <img src="/static/logo.png">  </a>
 
@@ -29,15 +27,12 @@
                       <li><a href="">FORMATION</a></li>
                       <li><a href="/avis">Avis </a></li>
                       <li><a href="">CONTACT</a></li>
-                      
+                      <li><a href="/apropos">Apropos</a></li>
                   </ul>
-
-                  
-
               </div>  
 
             </nav>
-
+          
             <div class="description">
                 <h1>NOM DE L'ECOLE</h1>
                 <p>Voici un bref descriptif de l'ecole et toute les formations qu'elle propose </p>
@@ -54,17 +49,18 @@
                 <div class="cards">
   
                     <div class="card">
-                      <img class="card__image" src="static/java.jpg" alt="">
+                      <img class="card__image" src="/static/bdd/{{formation.titredb}}.png" alt="">
                       <div class="card__content">
                         <h1> {{formation.titredb}}</h1>
                         <p>
-                            Une description de la formation et de ces composants
+                          {{formation.desc_courtedb}}
                         </p>
                       </div>
                       <div class="card__info">
                         
                         <div>
-                          <a href="./" class="card__link">Details</a>
+                          
+                          <a href="{{url_for('detailspage',formation_titre=formation.titredb)}}" class="card__link">Details</a>
                         </div>
                       </div>
                     </div>

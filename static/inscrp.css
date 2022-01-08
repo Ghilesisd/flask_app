@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+body,input{
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.container::before{
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    background-image: url('campus.png');
+    background-size: 1000px 900px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    /*background-image: linear-gradient(-45deg,#20dbc2 0%,#00bfa6 100%);
+*/
+}
+.forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 9;
+    left: 0;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    z-index: 5;
+   
+}
+.title{
+    font-size: 2.2em;
+    color: #444;
+    margin-bottom: 10px;
+}
+.input-frm{
+    min-width: 380px;
+    
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 10px 0 ;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+.input-frm:hover,.input-frm:active{
+    border: turquoise solid 1px;
+}
+.input-frm i{
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    font-size: 1.3rem;
+}
+.input-frm input, .input-frm select {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+}
+.input-frm input:placeholder-shown,.input-frm select:placeholder-shown {
+    color: #aaa;
+    font-weight: 500;
+}
+.btn{
+    width: 150px;
+    height: 49px;
+    outline: none;
+    border: none;
+    border-radius: 48px;
+    background-color: #20dbc9;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #00bfa6;   
+}
+.inscription{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform:translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.panels-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 35%;
+    left: 0;
+    z-index: 1;
+    margin: auto;
+    
+
+}
+
+.content{
+    padding: 3rem 17% 2rem 12%;
+    align-items: center;
+    color:black;
+}
+.panel h3{
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.5rem;
+}
+.panel p{
+    font-size: 1rem;
+    padding: .7rem 0;
+}

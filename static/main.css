@@ -30,7 +30,7 @@ nav {
     width: 50px;
 }
 .menu{
-    flex= 1;
+    flex:1;
     text-align: right;
 }
 .menu ul li {
