@@ -5,7 +5,11 @@ from sqlalchemy.sql.expression import false
 
 app = Flask(__name__)
 
+
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost:5432/formation"
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:asma0613@localhost/formation"
+
 
 
 db = SQLAlchemy(app)
@@ -52,6 +56,7 @@ def adminpage():
 
 def homepage():
 
+
     if request.method == 'POST':
        titre=request.form['titre']
        Categorie=request.form['Categorie']
@@ -66,10 +71,12 @@ def homepage():
        db.session.commit()
     formations=formation.query.all()
 
+   
 
 
 
-    return render_template("base.html",formations=formations)
+
+    return render_template("home.html")
     
     
 
@@ -86,6 +93,42 @@ def detailspage(formation_titre):
 @app.route('/apropos')
 def Apropos():
     return render_template('aproposde.html')
+
+
+@app.route('/formations/', methods=['POST', 'GET'])
+def formations():
+  if request.method == 'POST' and request.form['flag'] != "1":
+       titre=request.form['titre']
+       Categorie=request.form['Categorie']
+       desc_courte=request.form['desc_courte']
+       desc_long=request.form['desc_long']
+      # print(titre,Categorie,desc_courte,desc_long)
+      
+       
+
+  
+       newFormation= formation (titre,Categorie,desc_courte,desc_long)
+       db.session.add(newFormation)   
+       db.session.commit()
+  formations=formation.query.all()
+
+  if request.method == 'POST' and request.form['flag']=="1":
+
+       Categoriefilter= request.form['Categoriefilter']
+       print(Categoriefilter)
+       formations = formation.query.filter_by(Categoriedb=Categoriefilter)
+    
+  return render_template('formations.html',formations=formations)
+
+
+
+
+
+
+
+ 
+  
+
 
 @app.route('/inscription' ,  methods=['POST', 'GET'])
 def inscr():

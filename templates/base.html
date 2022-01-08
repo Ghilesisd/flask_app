@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
     <head>
         <title>eLearning Site</title>
@@ -48,33 +49,65 @@
           {% for formation in formations %}
         
                 <div class="cards">
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>devschool</title>
+  <link rel="stylesheet" href="/static/style_back.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  {% block style %}
+
   
-                    <div class="card">
-                      <img class="card__image" src="/static/bdd/{{formation.titredb}}.png" alt="">
-                      <div class="card__content">
-                        <h1> {{formation.titredb}}</h1>
-                        <p>
-                          {{formation.desc_courtedb}}
-                        </p>
-                      </div>
-                      <div class="card__info">
-                        
-                        <div>
-                          
-                          <a href="{{url_for('detailspage',formation_titre=formation.titredb)}}" class="card__link">Details</a>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
-            
-            {% endfor %}
-          </section>
-
-            
+  {% endblock %}
+</head>
+<body>
+  
+  <!-- nav-bar  -->
+  <section id="nav-bar" class="container">
+    <header class="nav-bar">
+      <div class="brand"><a href="#hero"><h1>Devschool</h1></a></div>
+      <div class="nav-list">
         
-
-      
-          
-    </body>
+        <ul>
+          <li><a href="/formations">Formations</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="/apropos">A propos</a></li>
+        </ul>
+      </div>
+    </header>
+  </section>
+ 
+  <!-- End nav-bar  -->
+ {% block content %}
+  
+ 
+{% endblock %}
+  <!-- Footer section  -->
+  <footer id="footer" class="footer container">
+    <div class="footer-contact">
+      <h1 class="footer-contact-heading">Contact With Me</h1>
+      <p class="footer-contact-info">Email: yourname@gmail.com</p>
+      <p class="footer-contact-info">Mobile: 234 234 2342</p>
+    </div>
+    <div class="footer-social-follow">
+      <h1 class="footer-social-follow-heading">Follow Me</h1>
+      <div class="footer-social-icon">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram-square"></i></a>
+        <a href="#"><i class="fab fa-behance-square"></i></a>
+        <a href="#"><i class="fab fa-dribbble-square"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer section  -->
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
 </html>
