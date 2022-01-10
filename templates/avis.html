@@ -1,27 +1,14 @@
-<!DOCTYPE html>
-<html lang="fr">
- <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fichiers CSS -->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/static/style3.css">
-    <title>Document</title>
- </head>
- <body>
-      <nav>
-         <img src="/static/Image-témoignage logo.png" alt="">
-         <h1>Voici quelque temoignages de notre clients sur l'école:</h1>
-         <a href="/">home</a>
-      </nav>
-   
+{% extends 'base.html' %}
+
+
+{% block content %}
      
       <main>
-       
+      
        
         <!-- Conteneur principal de tout le diaporama -->
         <div class="diapo">
+            <h1>Votre Avis Nous Intéresse </h1>
             <!-- Conteneur des "diapos" -->
             <div class="elements">
                 
@@ -71,20 +58,19 @@
             <i id="nav-gauche" class="las la-chevron-left"></i>
             <i id="nav-droite" class="las la-chevron-right"></i>
             <div class="image">
-              <img src="/static/IMAGE3.jpg" alt="">
+              <img src="/static/avisclient.jpg" alt="">
             </div>
             
         </div>
     </main>
     <div class="btn-cmntr">
-      <a href="/cmntr" > Donnez votre avis</a> 
+      <a href="/cmntr" > laissez votre avis!</a> 
     </div>
     
     
 
      
-        <script src="/static/javac.js"></script>
+       
    
-
-   </body>
-</html>
+{% endblock %}
+  

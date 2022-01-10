@@ -440,6 +440,138 @@ html {
 /* End Footer section  */
 
 
+ /* avis*/ 
+ main{
+  background-color:rgb(219, 223, 226);
+  width: 90%;
+  margin: auto;
+  height: 370px;
+}
+nav img{
+  width: 20%;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+nav{
+  margin: 0%;
+  padding: 0%;
+  display:flex ;
+  flex-direction: row;
+  background-color: white;
   
+}
+.diapo{
+  position: relative;
+  overflow: hidden;
+  
+  padding-top: 3%;
+  
+}
+.diapo h1{
+  padding-bottom: 60px;
+  padding-left: 35%;
+  font-family: cursive;
+  color:rgb(13, 13, 151);
+}
+#nav-droite, #nav-gauche{
+  position:absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  text-align: center;
+  color:rgb(219, 108, 68);
+  font-size: 5em;
+}
+
+
+#nav-droite{
+  right:40px;
+}
+#nav-gauche{
+  left: 40px;
+}
+
+.elements{
+  width: 100%;
+  
+  display: flex;
+  transition: 1s linear;
+}
+
+
+.element{
+  flex: 1 0 100%;
+  position: relative;
+  margin-top: 0px;
+  
+ 
+}
+
+
+.caption{
+  width: 60%;
+  background-color: white;
+  text-align: center;
+  margin-left: 20%;
+  
+  border-radius: 10%;
+  border: 2px solid rgb(24, 23, 23);
+
+}
+
+.caption p{
+  text-align: center;
+  font-family:   monospace;
+  font-size: 1.5em;
+
+}
+
+.caption h2{ 
+  color: chocolate;
+  font-size: 2em;
+  padding-top: 10px;
+  
+  text-decoration: underline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.image img{
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 15px;
+
+}
+nav h1{
+  padding-left: 10%;
+}
+.btn-cmntr{
+  text-decoration: none;
+  justify-content: center;
+  position: relative;
+  left: 40%;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-top: 20px;
+  border: 2px solid rgb(24, 23, 23);
+  border-radius: 20%;
+  background-color:rgb(219, 223, 226);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 30px;
+  transition: ease-out 0.3s;
+}
+.btn-cmntr:hover{
+  box-shadow: inset 200px 0 0 0 red;
+}
+
+.btn-cmntr a{
+  text-decoration: none;
+  font-size: 2em;
+  color: rgb(13, 13, 151);
+}
+
+/* end avis*/
+/*formulaire de commentaire*/
 
 

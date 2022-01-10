@@ -1,54 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="fr">
-    <head>
-        <title>eLearning Site</title>
-        <link rel="stylesheet" href="../static/main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-<script>
-  if ( window.history.replaceState ) {
-    window.history.replaceState( null, null, window.location.href );
-  }
-
-</script>
-    </head>
-
-    <body>
-      
-        <section class="header" >
-          
-            <nav>
-                <a href="/"> <img src="/static/logo.png">  </a>
-
-
-              <div class="menu">
-                  <ul>
-                      <li><a href="">ACCEUIL</a></li>
-                      <li><a href="">FORMATION</a></li>
-                      <li><a href="/avis">Avis </a></li>
-                      <li><a href="">CONTACT</a></li>
-                      <li><a href="/apropos">Apropos</a></li>
-                  </ul>
-              </div>  
-
-            </nav>
-          
-            <div class="description">
-                <h1>NOM DE L'ECOLE</h1>
-                <p>Voici un bref descriptif de l'ecole et toute les formations qu'elle propose </p>
-    
-
-
-            </div>
-        
-
-        </section>
-        <section class="cards">
-          {% for formation in formations %}
-        
-                <div class="cards">
 
 <html lang="en">
 <head>
@@ -58,6 +7,7 @@
   <link rel="stylesheet" href="/static/style_back.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   {% block style %}
 
   
@@ -74,7 +24,7 @@
         <ul>
           <li><a href="/formations">Formations</a></li>
           <li><a href="">Projects</a></li>
-          <li><a href="">About</a></li>
+          <li><a href="/avis">Avis</a></li>
           <li><a href="/apropos">A propos</a></li>
         </ul>
       </div>
@@ -108,6 +58,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+  <script src="/static/javac.js"></script>
 </body>
 </html>
