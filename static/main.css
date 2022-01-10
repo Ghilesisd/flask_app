@@ -1,65 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    
-    
-    
-    
-}
 
- .header{
-    min-height: 100vh;
-    background-image: url("campus.png");
-    
-    
-  
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;     
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
- nav img{
-    width: 50px;
-}
-.menu{
-    flex:1;
-    text-align: right;
-}
-.menu ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.menu ul li a {
-    color: azure;
- 
-    font-size: 14px;
-}
-.description{
-    width: 90%;
-    color: blanchedalmond;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.description h1{
-    font-size: 70;
-}
-.description p{
-    margin: 10px 0 40px;
-    font-size: 20px;
-}
 /* cards view*/
 .cards {
     margin: 0 auto;
@@ -129,4 +68,26 @@ nav {
   .card__link:hover {
     text-decoration: underline;
   }
+select{
+    width: 50%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    
+   
+  }
+.categorie{
+  font-size: 20px;
+}
+.btncategorie{
+  background-color: #dbdbdb; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
   

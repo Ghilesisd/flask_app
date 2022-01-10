@@ -1,0 +1,77 @@
+.couleur {
+	color:rgb(45, 45, 53);
+       
+	 
+	
+}
+li{
+    font-size : 30px;
+	
+}
+table{
+    font-size: 30px;
+	border-collapse:collapse;
+}	
+table,th,td{border:1px solid black;}
+p{font-size:30px;} 
+h1{color:#2b0572; font-style:italic;font-size:40px;}
+.bordure {
+	margin-left:20px;
+	margin-right:20px;
+	
+	
+}
+th {
+    font-family: monospace;
+    border: thin solid #b3b6b9;
+    width: 35%;
+    padding: 10px;
+    background-color: #b3b6b9;
+    background-image: url(sky.jpg);
+
+}
+td {
+
+    font-family: sans-serif;
+    border: thin solid #b3b6b9;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.titre span{
+	color:#fb911f;
+	font-size:100px;
+	font-style:italic;
+}
+.titre {
+	font-size:70px;
+	color:rgb(36, 35, 35);
+	font-style:italic;
+	
+}
+body {
+	font-size:30px;
+	background-image: url("/static/fond.PNG");
+	margin:0;
+	padding:0;
+}
+
+
+.container{
+	position:absolute;
+	top:120%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width: 1000px;
+	padding:30px;
+	background:#fff;
+	box-sizing:border-box;
+	border-radius:10px;
+	box-shadow: 0 15px 50px rgba(0,0,0,.2);
+
+}
+.image  {
+    width:300px;
+	height:70px;
+}

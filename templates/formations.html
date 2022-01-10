@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block style %} <link rel="stylesheet" href="/static/main.css">
+<script>
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+</script>
+{% endblock %}
+{% block content %}
+
+       
+
+        
+          <section id="about" class="about container">
+            <div class="about-info">
+              <h1 class="about-info-heading">Formations que nous proposons</h1>
+              <p class="about-info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi suscipit quidem ullam voluptates repellendus explicabo placeat, expedita ratione saepe eaque dolorum sed deleniti, odit numquam, nostrum tempore quos corrupti rem.</p>
+              
+            </div>
+            
+           
+            
+          </section>
+          
+            <form name="filter" action="/formations/" method="POST">
+              <input   name="flag"  type="hidden" placeholder="titre de la formation"  value="1" />
+              <div>
+                CHOISIR UNE CATEGORIE :  <select name="Categoriefilter">
+                     <option value="">Choisir une categorie</option>
+                     <option value="Developpement Web">Developpement Web</option>
+                     <option value="Developpement mobile">Developpement mobile</option>
+                     <option value="Desktop Developpement">Desktop Developpement</option>
+                 </select>
+                 <input type="submit" value="submitf" class="btncategorie"/>
+    
+                 </div>
+                </form>
+              
+          <section class="cardsection">
+           
+            <div class="cardsection grid">
+              {% for formation in formations %}
+                <div class="grid-item">
+                  <div class="card">
+                    <img class="card-img" src="/static/web.jpg" alt="web" />
+                    <div class="card-content">
+                      <h1 class="card-header">{{formation.titredb}}</h1>
+                      <p class="card-text">
+                        {{formation.desc_courtedb}}
+                      </p>
+                      <a href="{{url_for('detailspage',formation_titre=formation.titredb)}}" class="card-btn" >Visit <span>&rarr;</span></a>
+                    </div>
+                  </div>
+                </div>
+
+                {% endfor %}
+                
+              </div>
+              
+            
+          </section>
+       
+            
+        
+
+      
+{% endblock %}

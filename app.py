@@ -25,10 +25,12 @@ from wtforms.fields.simple import BooleanField, PasswordField
 from wtforms.validators import DataRequired,Email,length,EqualTo,ValidationError
 
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost/formation"
 app.config.from_object(Config)
 login_manager=LoginManager()
 bcrypt=Bcrypt()
+
 
 login_manager.init_app(app)
 bcrypt.init_app(app)
@@ -131,20 +133,11 @@ def adminpage():
 
 def homepage():
 
-    if request.method == 'POST':
-       titre=request.form['titre']
-       Categorie=request.form['Categorie']
-       desc_courte=request.form['desc_courte']
-       desc_long=request.form['desc_long']
-       newFormation=formation(titre,Categorie,desc_courte,desc_long)
-       db.session.add(newFormation)   
-       db.session.commit()
-    formations=formation.query.all()
-    
+   
 
 
 
-    return render_template("base.html",formations=formations)
+    return render_template("home.html")
     
     
 
@@ -158,9 +151,45 @@ def detailspage(formation_titre):
   return render_template("details.html",formations=formations  )
   
 
-@app.route('/apropos')
-def Apropos():
-    return render_template('aproposde.html')
+
+
+@app.route('/ecole')
+def ecole():
+    return render_template('ecole.html')
+
+@app.route('/paiement')
+def paiement():
+    return render_template('paiement.html')
+
+@app.route('/certificat')
+def certificat():
+    return render_template('certificat.html')
+
+@app.route('/formations/', methods=['POST', 'GET'])
+def formations():
+  if request.method == 'POST' and request.form['flag'] != "1":
+       titre=request.form['titre']
+       Categorie=request.form['Categorie']
+       desc_courte=request.form['desc_courte']
+       desc_long=request.form['desc_long']
+      # print(titre,Categorie,desc_courte,desc_long)
+      
+       
+
+  
+       newFormation= formation (titre,Categorie,desc_courte,desc_long)
+       db.session.add(newFormation)   
+       db.session.commit()
+  formations=formation.query.all()
+
+  if request.method == 'POST' and request.form['flag']=="1":
+
+       Categoriefilter= request.form['Categoriefilter']
+       print(Categoriefilter)
+       formations = formation.query.filter_by(Categoriedb=Categoriefilter)
+    
+  return render_template('formations.html',formations=formations)
+
 
 
 @app.route('/register',  methods=['POST', 'GET'])
@@ -175,7 +204,7 @@ def register():
       password=form.password.data
     )
    
-   # flash('registration successful')
+    flash('registration successful')
     return redirect(url_for('login'))
   return render_template('register.html',form=form)
 
@@ -202,12 +231,7 @@ def logout():
 
 if __name__ == '__main__':
     db.create_all()
-    if not User.query.filter_by(user_name='katia').first():
-      User.create_user(
-        user='katia',
-        email='tst@gmail.com',
-        password='secret'
-      )
+    
    # f1=formation('html','','','')
     #db.session.add(f1)
     #db.session.commit()
