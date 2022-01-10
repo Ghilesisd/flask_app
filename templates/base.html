@@ -24,10 +24,32 @@
               <div class="menu">
                   <ul>
                       <li><a href="">ACCEUIL</a></li>
-                      <li><a href="">FORMATION</a></li>
-                      <li><a href="">RECHERCHES</a></li>
+                      <li><a href="/register">cree un compte</a></li>
+
+                      <li> {%if current_user.is_authenticated%}
+                               <a href="/logout">sign out</a>
+                           {%else%}
+                              <a href="/login">sign in</a>
+                            {%endif%}
+
+
+                              
+                              
+                      </li>
+
                       <li><a href="">CONTACT</a></li>
                       <li><a href="/apropos">Apropos</a></li>
+                      <li>
+                        <a href="">
+                          {%if current_user.is_authenticated%}
+                             LoggedIn as  <b style="color: green;"> {{current_user.user_name.title()}}</b>
+                          {%else%}
+                             Not looggedIn
+                          {%endif%}
+                        </a>
+                      </li>
+
+
                   </ul>
               </div>  
 

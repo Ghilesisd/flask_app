@@ -58,12 +58,24 @@ form{
     margin: 10px 0 ;
     border-radius: 55px;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 13% 80%;
     padding: 0 0.4rem;
     position: relative;
 }
+.inpt{
+   width: 100%;
+   min-width: 325px;
+    height: 55px;
+    background-color: #f0f0f0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 13% 80%;
+    position: relative;
+}
+
 .input-frm:hover,.input-frm:active{
     border: turquoise solid 1px;
+    background-color:#f0f0f0 ;
 }
 .input-frm i{
     text-align: center;
@@ -134,4 +146,11 @@ form{
 .panel p{
     font-size: 1rem;
     padding: .7rem 0;
+}
+.erreur{
+    
+   
+    z-index: 1000;
+    margin: 3px 3px;
+    color: red;
 }

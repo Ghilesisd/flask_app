@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/inscrp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signIn</title>
+</head>
+<body>
+    
+
+
+    <div class="container">
+        <div class="forms-container">
+                <div class="inscription">
+                        <h1>loginhere !!</h1>
+                        <p> merci de completer le formulaire ci-dessous</p>
+                        <hr>
+                        <form action="/login" method="POST" class="inscr-form">
+                            {{form.hidden_tag()}} 
+
+
+
+                      
+                      
+                        <div class="input-frm">
+                            <i class="fas fa-envelope"></i>
+                            {{form.email( class="inpt", placeholder="Email")}}
+                        </div>
+                       
+                            {% for error in form.email.errors %}
+                                 <pre class="erreur">{{ error }}</pre> 
+                            {% endfor %}
+
+                        <div class="input-frm">
+                           
+                            {{form.password( class="inpt", placeholder="password")}}
+                        </div>
+                            {% for error in form.password.errors %}
+                                 <pre class="erreur">{{ error }}</pre> 
+                            {% endfor %}
+                        <div >
+                            {{form.stay_loggedin()}}
+                             {{form.stay_loggedin.label}}
+                            
+                        </div>
+
+
+                         {{form.submit(class="btn")}}
+                        </form>
+
+                      
+                    </div>
+                </div>
+                
+            </div>
+</body>
+</html>

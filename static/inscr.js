@@ -1,4 +1,11 @@
 
+/* swal({
+    title: "votre inscription a été acceptée avec succès",
+    text: "Vous devez vous présenter a l'école pour confirmer votre inscription",
+    icon: "success",
+    button: "OK",
+});
+
 document.querySelector('#submit').onclick=()=>{
     
     var nom= document.querySelector('#nom');
@@ -12,10 +19,20 @@ document.querySelector('#submit').onclick=()=>{
                 icon: "success",
                 button: "OK",
           });}
+    else{
+        swal({
+            title: "erreur",
+            text: "Vous devez remplire tous les champs",
+            icon: "success",
+            button: "OK",
+      });
+
+    }
   
     };
 
 
+*/
 
 
 
