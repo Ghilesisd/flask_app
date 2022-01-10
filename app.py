@@ -2,7 +2,7 @@
 from flask import Flask, render_template,request,flash
 from flask.helpers import url_for
 
-
+from flask_wtf import *
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import insert
 from sqlalchemy.sql.expression import false
@@ -26,7 +26,7 @@ from wtforms.validators import DataRequired,Email,length,EqualTo,ValidationError
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost/formation"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:post@localhost/formation"
 app.config.from_object(Config)
 login_manager=LoginManager()
 bcrypt=Bcrypt()
@@ -226,6 +226,14 @@ def login():
 def logout():
   logout_user()
   return redirect(url_for('homepage'))
+
+
+@app.route('/evenements')
+
+def evenements():
+  
+  return render_template('evenements.html')
+
 
 
 

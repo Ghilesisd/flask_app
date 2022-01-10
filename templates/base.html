@@ -38,8 +38,18 @@
             <a href="">
               {%if current_user.is_authenticated%}
                   Connecté(<b style="color: green;"> {{current_user.user_name.title()}})</b>
+                  
               {%else%}
                    Non connecté
+      
+              {%endif%}
+            </a>
+          </li>
+          <li>
+            <a href="/evenements">
+              {%if current_user.is_authenticated%}
+                  Evenements
+                
       
               {%endif%}
             </a>
