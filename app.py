@@ -9,7 +9,7 @@ from sqlalchemy.sql.expression import false
 from werkzeug.utils import redirect
   
 from config import Config
-from forms import RegistrationForm
+
 
 
 from flask_login import LoginManager, login_manager
@@ -112,6 +112,15 @@ class loginForm(FlaskForm):
 
 
     
+class aviss(db.Model):
+    __tablename__ ='avis'
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(20),unique=True)
+    Commentaire = db.Column(db.String(500),unique=True)
+
+    def __init__(self,nom,Commentaire):
+                self.nom=nom
+                self.Commentaire=Commentaire
 
 
 
@@ -235,6 +244,22 @@ def evenements():
   return render_template('evenements.html')
 
 
+@app.route('/avis', methods=['POST', 'GET'])
+def avis():
+        if request.method == 'POST':
+             nom=request.form['nom']
+             Commentaire=request.form['Commentaire']
+             newAvis=aviss(nom,Commentaire)
+             db.session.add(newAvis)
+             db.session.commit()
+        lesavis = aviss.query.all()
+        return render_template('avis.html',lesavis=lesavis)
+
+@app.route('/cmntr')
+
+def commentaire():
+
+    return render_template('cmntr.html')
 
 
 if __name__ == '__main__':

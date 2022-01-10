@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+     
+      <main>
+      
+       
+        <!-- Conteneur principal de tout le diaporama -->
+        <div class="diapo">
+            <h1>Votre Avis Nous Intéresse </h1>
+            <!-- Conteneur des "diapos" -->
+            <div class="elements">
+                
+                <!-- Première diapo -->
+                <div class="element ">
+                    
+                    <div class="caption">
+                        
+                        <h2>sonia mihoubi </h2>
+                        <p>"Une école magnifique, des cours professionnels au sens propre du terme, un excellent support technique, et franchement, les mots ne peuvent exprimer mes remerciements et ma gratitude au responsable de l'école." </p>
+                    </div>
+                </div>
+               <!-- Deuxième diapo --> <!--apr nsuprimi hdo-->
+               <div class="element">
+                
+                   <div class="caption">
+                     
+                     <h2>salim bensalah </h2>
+                     <p>"L’ecole travaille avec des formateurs ayant un très bon niveau, sans oublier leur souplesse et leur adaptabilité.on était une équipe formidable, je passe mes salutation a mes collegues"</p>
+                   </div>
+               </div>
+             <!-- Une boucle pour rajouter des commentaires--> 
+                {% for aviss in  lesavis %}
+              
+                      <div class="element">
+          
+                          <div class="caption">
+                           
+                            <!--recupérer le nom et le commentaire -->
+                              <h2> {{aviss.nom}}</h2>
+                              <p>  {{aviss.Commentaire}} </p>
+                          </div>
+                            
+                                
+                               
+                            
+                      </div>
+                          
+                        
+                  
+                {% endfor %}
+             
+              
+               
+           </div>
+            <!-- Flèches de navigation -->
+            <i id="nav-gauche" class="las la-chevron-left"></i>
+            <i id="nav-droite" class="las la-chevron-right"></i>
+            <div class="image">
+              <img src="/static/avisclient.jpg" alt="">
+            </div>
+            
+        </div>
+    </main>
+    <!--btn pour aller au formulaire de cmntr-->
+    <div class="btn-cmntra">
+      <a href="/cmntr" > laissez votre avis!</a> 
+    </div>
+    
+    
+
+     
+       
+   
+{% endblock %}
+  
