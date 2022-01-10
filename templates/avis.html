@@ -21,7 +21,7 @@
                         <p>"Une école magnifique, des cours professionnels au sens propre du terme, un excellent support technique, et franchement, les mots ne peuvent exprimer mes remerciements et ma gratitude au responsable de l'école." </p>
                     </div>
                 </div>
-               <!-- Deuxième diapo -->
+               <!-- Deuxième diapo --> <!--apr nsuprimi hdo-->
                <div class="element">
                 
                    <div class="caption">
@@ -30,14 +30,14 @@
                      <p>"L’ecole travaille avec des formateurs ayant un très bon niveau, sans oublier leur souplesse et leur adaptabilité.on était une équipe formidable, je passe mes salutation a mes collegues"</p>
                    </div>
                </div>
-              
+             <!-- Une boucle pour rajouter des commentaires--> 
                 {% for aviss in  lesavis %}
               
                       <div class="element">
           
                           <div class="caption">
                            
-                            
+                            <!--recupérer le nom et le commentaire -->
                               <h2> {{aviss.nom}}</h2>
                               <p>  {{aviss.Commentaire}} </p>
                           </div>
@@ -63,7 +63,8 @@
             
         </div>
     </main>
-    <div class="btn-cmntr">
+    <!--btn pour aller au formulaire de cmntr-->
+    <div class="btn-cmntra">
       <a href="/cmntr" > laissez votre avis!</a> 
     </div>
     

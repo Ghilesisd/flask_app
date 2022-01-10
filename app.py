@@ -45,6 +45,17 @@ class Inscription(db.Model):
                             self.téléphone=téléphone
                             self.formation_insc=formation_insc   
 
+class aviss(db.Model):
+    __tablename__ ='avis'
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(20),unique=True)
+    Commentaire = db.Column(db.String(500),unique=True)
+
+
+    def __init__(self,nom,Commentaire):
+                self.nom=nom
+                self.Commentaire=Commentaire
+
 @app.route('/admin/', methods=['POST', 'GET'])
 
 def adminpage():
@@ -146,16 +157,9 @@ def inscr():
 
   formations=formation.query.all()
   return render_template('inscrp.html',formations=formations )
-class aviss(db.Model):
-    __tablename__ ='avis'
-    id = db.Column(db.Integer, primary_key=True)
-    nom = db.Column(db.String(20),unique=True)
-    Commentaire = db.Column(db.String(500),unique=True)
 
 
-    def __init__(self,nom,Commentaire):
-                self.nom=nom
-                self.Commentaire=Commentaire
+
 
 
 @app.route('/avis', methods=['POST', 'GET'])

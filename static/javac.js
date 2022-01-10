@@ -1,4 +1,4 @@
-// Variables globales
+
 let compteur = 0 // Compteur qui permettra de savoir sur quelle slide nous sommes
 let timer, elements, slides, slideWidth
 
@@ -37,9 +37,7 @@ window.onload = () => {
    )
 }
 
-/**
- * Cette fonction fait défiler le diaporama vers la droite
- */
+/** * Cette fonction fait défiler le diaporama vers la droite */
 function slideNext(){
     // On incrémente le compteur
     compteur++

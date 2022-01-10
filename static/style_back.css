@@ -543,7 +543,7 @@ nav{
 nav h1{
   padding-left: 10%;
 }
-.btn-cmntr{
+.btn-cmntra{
   text-decoration: none;
   justify-content: center;
   position: relative;
@@ -561,11 +561,11 @@ nav h1{
   margin-bottom: 30px;
   transition: ease-out 0.3s;
 }
-.btn-cmntr:hover{
+.btn-cmntra:hover{
   box-shadow: inset 200px 0 0 0 red;
 }
 
-.btn-cmntr a{
+.btn-cmntra a{
   text-decoration: none;
   font-size: 2em;
   color: rgb(13, 13, 151);
@@ -574,4 +574,112 @@ nav h1{
 /* end avis*/
 /*formulaire de commentaire*/
 
+.input-frma {
+ display: flex;
+ flex-direction: column;
+ margin-bottom: 20px;
+ margin-left: 20px;
+ 
 
+}
+i{
+  font-size: 2em;
+  margin-left: 35px;
+  color:midnightblue;
+}
+.cmntr-form i::first-line{
+  margin-left:30px;
+}
+
+
+.btn-cmntr{
+width: 100px;
+height: 50px;
+margin-left:35%;
+margin-bottom: 20px;
+margin-top: 5px;
+background-color:rgb(250, 4, 37);
+color: white;
+border-radius: 5px;
+box-shadow: inset 0 0 0 0 rgb(50, 233, 111);
+transition: ease-in-out ;
+outline: none;
+padding: 10px;
+
+
+}
+.btn-cmntr:hover{
+  box-shadow: inset 100px 0 0 0 rgb(50, 233, 111);
+}
+
+
+
+
+
+
+.acontainer{
+  
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  padding-left: 30px;
+  background-color: rgb(230, 225, 233);
+  margin-bottom:5% ;
+ 
+  
+}
+.acontainer h1{
+  text-align: center;
+  align-items: center;
+  padding-top: 15px;
+  font-size: 3.5em;
+}
+
+.acontainer img{
+  width: 15%;
+  margin-left:  20px;
+  transform: rotate(-30deg);
+  
+  
+}
+.cmntr-form{
+ background-color:white;
+ border: 3px solid black;
+ padding-left: 60px;
+ padding-top: 10px;
+ width: 60%;
+ margin: auto;
+ border-radius: 20%;
+ 
+
+
+ 
+}
+
+#nom{
+   width: 180px;
+   height: 23px;
+   margin-top: 8px;
+   margin-left: 35px;
+   border: 2px solid rgb(66, 66, 117);
+   background-color: rgb(225, 235, 245);
+   border-radius: 5%;
+   
+   
+   
+
+}
+#cmntr{
+  width: 80%;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: 2px solid rgb(66, 66, 117);
+  background-color:rgb(225, 235, 245);
+  border-radius: 5%;
+  
+}
+.acontainer .input-frma:first-child{
+  margin-left: 140px;
+  width: 20px;
+}
+/*fin de formulaire*/
