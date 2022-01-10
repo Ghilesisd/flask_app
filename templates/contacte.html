@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>contacte</title>
+    <link rel="stylesheet" href="../static/contactecss.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% if message %}
+    <p class="message">{{ message | safe }}</p>
+    {% endif %}
+    <form action="/submit" method="POST">
+      <h1>Contactez-nous</h1>
+      <div class="separation"></div>
+      <div class="corps-formulaire">
+        <div class="gauche">
+          <div class="groupe">
+            <label for="fname">Votre Prénom</label>
+            <input type="text" id="nom" name="nom" autocomplete="off"  />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="groupe">
+            <label for="email">Votre adresse e-mail</label>
+            <input type="text" id="email" name="email" autocomplete="off" />
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="groupe">
+            <label for="telephone">Votre téléphone</label>
+            <input type="text" id="telephone" name="telephone" autocomplete="off" />
+            <i class="fas fa-mobile"></i>
+          </div>
+        </div>
+
+        <div class="droite">
+          <div class="groupe">
+            <h3>Message</h3>
+          <textarea
+            name="comments"
+            id="comments"
+            
+            placeholder="Saisissez ici..."
+          ></textarea>
+            
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="pied-formulaire" align="center">
+        <button>Envoyer le message</button>
+      </div>
+    
+    </form>
+    <div class="gps">
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SxYhonQmrSJD7Jkvq4pvIjN3q_Y68tHt&ehbc=2E312F" width="550" height="350" framborder="1" style="border: 1px;"></iframe>
+    </div>  
+  </body>
+</html>
