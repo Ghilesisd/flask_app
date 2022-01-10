@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+    {% block content %}
+  
+    <div class="acontainer">
+        <h1>Racontez-nous votre expérience</h1>
+        <img src="/static/PikPng.com_avis-logo-png_5929618.png" alt="">
+              <!--formulaire-->
+                   
+                     <form action="/avis" method="POST" class="cmntr-form">
+                        <!--Première entrée-->
+                            <div class="input-frma">
+                                <i class="fas fa-user"></i>  
+                             <!--<Label>Nom Prénom</Label>-->
+                             <input type="text" name="nom"  id="nom" required placeholder="votre nom et prénom"> 
+                            </div>
+                        <!--deuxième entrée-->
+                            <div class="input-frma">
+                                <i class="fas fa-comments"></i>
+                            <!-- <label for="Commentaire" > Commentaire </label>-->
+                                <textarea name="Commentaire" id="cmntr" cols="30" rows="10" required placeholder=" Écrivez Votre avis ici. Laissez un témoignage honnête, utile et constructif "></textarea>
+
+                            </div>
+                        <!--bouton pour partager-->
+                            <input type="submit" actio value="partager" class="btn-cmntr" id="submit">
+                    </form>
+               
+               
+    </div>
+   
+
+  
+ 
+    {% endblock %}
