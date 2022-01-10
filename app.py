@@ -78,11 +78,19 @@ def detailspage(formation_titre):
   return render_template("details.html",formations=formations  )
   
 
-@app.route('/apropos')
-def Apropos():
-    return render_template('aproposde.html')
 
 
+@app.route('/ecole')
+def ecole():
+    return render_template('ecole.html')
+
+@app.route('/paiement')
+def paiement():
+    return render_template('paiement.html')
+
+@app.route('/certificat')
+def certificat():
+    return render_template('certificat.html')
 
 @app.route('/formations/', methods=['POST', 'GET'])
 def formations():

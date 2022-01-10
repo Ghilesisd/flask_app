@@ -1,0 +1,31 @@
+.menu-bar ul {
+	margin: 0px;
+	padding:  0px;
+	list-style : none;
+}
+.menu-bar ul li {
+	float:left;
+	width:200px;
+	height:40px;
+	background-color:black;
+	opacity:.8;
+	line-height:40px;
+	text-align:center;
+	font-size:20px;
+	margin-right:2px;
+}
+.menu-bar ul li a {
+	text-decoration:none;
+	color:white;
+	display:block;
+}
+.menu-bar ul li a:hover {
+	background-color:green;
+
+}
+.menu-bar ul li ul li {
+	display:none;
+}
+.menu-bar ul li:hover ul li {
+	display:block;
+}
