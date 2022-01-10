@@ -123,7 +123,19 @@ class aviss(db.Model):
                 self.Commentaire=Commentaire
 
 
+class feedback(db.Model):
+    __tablename__ = 'feedback'
+    id = db.Column(db.Integer, primary_key=True)
+    nom = db.Column(db.String(200), unique=True)
+    email = db.Column(db.String(200))
+    telephone = db.Column(db.String(10))
+    comments = db.Column(db.Text())
 
+    def __init__(self, nom, email, telephone, comments):
+        self.nom = nom
+        self.email = email
+        self.telephone = telephone
+        self.comments = comments
 
 
 
@@ -261,7 +273,29 @@ def commentaire():
 
     return render_template('cmntr.html')
 
+@app.route('/submit', methods=['POST','GET'])
+def submit():
+    if request.method == 'POST':
+        nom = request.form['nom']
+        email = request.form['email']
+        telephone= request.form['telephone']
+        comments = request.form['comments']
+        # print(customer, dealer, rating, comments)
+        if nom == '' or email == '' or telephone=='':
+            return render_template('contacte.html', message='Please enter required fields')
+        if db.session.query(feedback).filter(feedback.email == email).count() == 0:
+          base = feedback(nom, email,telephone, comments)
+          db.session.add(base)
+          db.session.commit()
+          return render_template('reussir.html')
+        return render_template('contacte.html', message='existe deja')
 
+
+@app.route('/contacte', methods=['POST','GET'])
+
+def contacte():
+
+    return render_template("contacte.html")
 if __name__ == '__main__':
     db.create_all()
     
