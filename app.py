@@ -1,6 +1,8 @@
 
 from flask import Flask, render_template,request,flash
 from flask.helpers import url_for
+from flask import  Response
+from werkzeug.utils import secure_filename
 
 
 from flask_sqlalchemy import SQLAlchemy
@@ -46,13 +48,15 @@ class formation(db.Model):
     Categoriedb = db.Column(db.String(120), unique=False, )
     desc_courtedb = db.Column(db.String(500), unique=False, )
     desc_longdb = db.Column(db.String(100000), unique=False, )
+    file_name= db.Column(db.String(100000), unique=False, )
 
-    def __init__(self,titredb,Categoriedb,desc_courtedb,desc_longdb):
+    def __init__(self,titredb,Categoriedb,desc_courtedb,desc_longdb,file_name):
          
                             self.titredb=titredb
                             self.Categoriedb=Categoriedb
                             self.desc_courtedb=desc_courtedb
                             self.desc_longdb=desc_longdb
+                            self.file_name=file_name
 
 
 class User(UserMixin, db.Model):
@@ -139,6 +143,12 @@ class feedback(db.Model):
 
 
 
+class Img(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    img = db.Column(db.Text, unique=True, nullable=False)
+    name = db.Column(db.Text, nullable=False)
+    mimetype = db.Column(db.Text, nullable=False)
+
 
        
 
@@ -147,18 +157,27 @@ class feedback(db.Model):
 
 def adminpage():
     
-  
     return render_template("admin.html")
 
 @app.route('/' , methods=['POST', 'GET'])
-
 def homepage():
 
-   
-
-
-
     return render_template("home.html")
+
+
+
+    
+@app.route('/<int:id>')
+def get_img(id):
+    img = Img.query.filter_by(id=id).first()
+    if not img:
+        return 'Img Not Found!', 404
+
+    return Response(img.img, mimetype=img.mimetype)
+
+
+
+
     
     
 
@@ -188,27 +207,27 @@ def certificat():
 
 @app.route('/formations/', methods=['POST', 'GET'])
 def formations():
-  if request.method == 'POST' and request.form['flag'] != "1":
+  if request.method == 'POST' :
        titre=request.form['titre']
        Categorie=request.form['Categorie']
        desc_courte=request.form['desc_courte']
        desc_long=request.form['desc_long']
       # print(titre,Categorie,desc_courte,desc_long)
+       pic = request.files['pic']
+
+       filename = secure_filename(pic.filename)
       
+       newFormation= formation (titre,Categorie,desc_courte,desc_long,filename)
        
-
-  
-       newFormation= formation (titre,Categorie,desc_courte,desc_long)
-       db.session.add(newFormation)   
+       db.session.add(newFormation)
+       
        db.session.commit()
+       
   formations=formation.query.all()
+        
 
-  if request.method == 'POST' and request.form['flag']=="1":
-
-       Categoriefilter= request.form['Categoriefilter']
-       print(Categoriefilter)
-       formations = formation.query.filter_by(Categoriedb=Categoriefilter)
-    
+       
+  
   return render_template('formations.html',formations=formations)
 
 
@@ -289,11 +308,18 @@ def submit():
 def contacte():
 
     return render_template("contacte.html")
+
+
+
+
+
+
 if __name__ == '__main__':
     db.create_all()
     
    # f1=formation('html','','','')
     #db.session.add(f1)
+
     #db.session.commit()
   
     app.run(debug = True)

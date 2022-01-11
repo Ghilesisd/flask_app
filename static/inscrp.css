@@ -6,14 +6,14 @@
 body,input{
     font-family: 'Poppins',sans-serif;
 }
-.container{
+.containerK{
     position: absolute;
     width: 100%;
     background-color: white;
     min-height: 100vh;
     overflow: hidden;
 }
-.container::before{
+.containerK::before{
     content: '';
     position: absolute;
     height: 2000px;
@@ -27,7 +27,7 @@ body,input{
     /*background-image: linear-gradient(-45deg,#20dbc2 0%,#00bfa6 100%);
 */
 }
-.forms-container{
+.forms-containerK{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,7 +50,7 @@ form{
     color: #444;
     margin-bottom: 10px;
 }
-.input-frm{
+.input-frmK{
     min-width: 380px;
     
     height: 55px;
@@ -73,17 +73,17 @@ form{
     position: relative;
 }
 
-.input-frm:hover,.input-frm:active{
+.input-frmK:hover,.input-frmK:active{
     border: turquoise solid 1px;
     background-color:#f0f0f0 ;
 }
-.input-frm i{
+.input-frmK i{
     text-align: center;
     line-height: 55px;
     color: #acacac;
     font-size: 1.3rem;
 }
-.input-frm input, .input-frm select {
+.input-frmK input, .input-frmK select {
     background: none;
     outline: none;
     border: none;
@@ -92,11 +92,11 @@ form{
     font-size: 1.2rem;
     color: #333;
 }
-.input-frm input:placeholder-shown,.input-frm select:placeholder-shown {
+.input-frmK input:placeholder-shown,.input-frmK select:placeholder-shown {
     color: #aaa;
     font-weight: 500;
 }
-.btn{
+.btnK{
     width: 150px;
     height: 49px;
     outline: none;
@@ -110,10 +110,10 @@ form{
     transition: all 0.5s;
     cursor: pointer;
 }
-.btn:hover{
+.btnK:hover{
     background-color: #00bfa6;   
 }
-.inscription{
+.inscriptionK{
     position: absolute;
     top: 50%;
     left: 75%;
@@ -121,7 +121,7 @@ form{
     display: grid;
     grid-template-columns: 1fr;
 }
-.panels-container{
+.panels-containerK{
     position: absolute;
     width: 100%;
     height: 100%;
