@@ -31,8 +31,8 @@
                             
                         </div>
                         {% for error in form.nom.errors %}
-                                 <pre class="erreur">{{ error }}</pre> 
-                            {% endfor %}
+                                 <pre class="erreur"><i class="fas fa-exclamation-triangle"></i>{{ error }}</pre> 
+                        {% endfor %}
 
                       
                         <div class="input-frm">
@@ -42,19 +42,19 @@
                          
                         </div>
                         {% for error in form.email.errors %}
-                        <pre class="erreur">{{ error }}</pre> 
+                        <pre class="erreur"><i class="fas fa-exclamation-triangle"></i>{{ error }}</pre> 
                     {% endfor %}
                         <div class="input-frm">
-                           
+                            <i class="fas fa-key"></i>
                             {{form.password( class="inpt", placeholder="password")}}
 
                             
                         </div>
                         {% for error in form.password.errors %}
-                                  <pre class="erreur">{{ error }}</pre> 
+                                  <pre class="erreur"> <i class="fas fa-exclamation-triangle"></i> {{ error }}</pre> 
                              {% endfor %} 
                         <div class="input-frm">
-                          
+                            <i class="fas fa-key"></i>
                             {{form.confirm( class="inpt", placeholder="confirm")}}
                         </div>
 

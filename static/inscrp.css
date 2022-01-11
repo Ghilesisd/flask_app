@@ -50,7 +50,7 @@ form{
     color: #444;
     margin-bottom: 10px;
 }
-.input-frmK{
+.input-frm{
     min-width: 380px;
     
     height: 55px;
@@ -73,17 +73,17 @@ form{
     position: relative;
 }
 
-.input-frmK:hover,.input-frmK:active{
+.input-frm:hover,.input-frm:active{
     border: turquoise solid 1px;
     background-color:#f0f0f0 ;
 }
-.input-frmK i{
+.input-frm i{
     text-align: center;
     line-height: 55px;
     color: #acacac;
     font-size: 1.3rem;
 }
-.input-frmK input, .input-frmK select {
+.input-frm input, .input-frm select {
     background: none;
     outline: none;
     border: none;
@@ -92,7 +92,7 @@ form{
     font-size: 1.2rem;
     color: #333;
 }
-.input-frmK input:placeholder-shown,.input-frmK select:placeholder-shown {
+.input-frm input:placeholder-shown,.input-frm select:placeholder-shown {
     color: #aaa;
     font-weight: 500;
 }

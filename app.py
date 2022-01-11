@@ -141,18 +141,7 @@ class feedback(db.Model):
         self.telephone = telephone
         self.comments = comments
 
-
-
-class Img(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    img = db.Column(db.Text, unique=True, nullable=False)
-    name = db.Column(db.Text, nullable=False)
-    mimetype = db.Column(db.Text, nullable=False)
-
-
        
-
-
 @app.route('/admin/', methods=['POST', 'GET'])
 
 def adminpage():
@@ -165,24 +154,7 @@ def homepage():
     return render_template("home.html")
 
 
-
-    
-@app.route('/<int:id>')
-def get_img(id):
-    img = Img.query.filter_by(id=id).first()
-    if not img:
-        return 'Img Not Found!', 404
-
-    return Response(img.img, mimetype=img.mimetype)
-
-
-
-
-    
-    
-
-
- 
+   
 
 
 @app.route('/details/<formation_titre>', methods=['POST', 'GET'])
