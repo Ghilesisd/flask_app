@@ -26,11 +26,15 @@
         <ul>
           <li><a href="/formations">Formations</a></li>
           <li><a href="/register">cree un compte</a></li>
-          <li> 
+          
         {%if current_user.is_authenticated%}
-            <a href="/logout">Déconnexion</a>
+            <li> <a href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnecter</a> </li>
+            <li>  <a href=""> <i class="fas fa-user-circle"></i>  Connecté(<b style="color: green;"> {{current_user.user_name.title()}})</b> </a> </li>
         {%else%}
-           <a href="/login">Connexion</a>
+
+           <li><a href="/register"> <i class="fas fa-user-circle"></i> Se Connecté </a></li>
+           
+          
         {%endif%}
       </li>
 
@@ -38,14 +42,9 @@
           <li><a href="/apropos">A propos</a></li>
           <li><a href="/avis"> Avis</a></li>
           <li>
-            <a href="">
-              {%if current_user.is_authenticated%}
-                  Connecté(<b style="color: green;"> {{current_user.user_name.title()}})</b>
-              {%else%}
-                   Non connecté
-      
-              {%endif%}
-            </a>
+
+
+          
           </li>
       
         </ul>

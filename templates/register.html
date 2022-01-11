@@ -12,11 +12,11 @@
     
 {% block content %}
    
-    <div class="container">
-        <div class="forms-container">
-                <div class="inscription">
-                        <h1>register here !!</h1>
-                        <p> merci de completer le formulaire ci-dessous</p>
+    <div class="containerK">
+        <div class="forms-containerK">
+                <div class="inscriptionK">
+                        <h1>Inscription </h1>
+
                         <hr>
                         <form action="/register" method="POST" class="inscr-form">
                             {{form.hidden_tag()}} 
@@ -25,14 +25,14 @@
 
                         <div class="input-frm">
                             <i class="fas fa-user"></i>
-                            {{form.nom( class="inpt", placeholder="Username")}}
+                            {{form.nom( class="inpt", placeholder="Nom d'utilisateur")}}
                            
                             
                             
                         </div>
                         {% for error in form.nom.errors %}
-                                 <pre class="erreur"><i class="fas fa-exclamation-triangle"></i>{{ error }}</pre> 
-                        {% endfor %}
+                        <pre class="erreur"><i class="fas fa-exclamation-triangle"></i>{{ error }}</pre> 
+                    {% endfor %}
 
                       
                         <div class="input-frm">
@@ -46,7 +46,7 @@
                     {% endfor %}
                         <div class="input-frm">
                             <i class="fas fa-key"></i>
-                            {{form.password( class="inpt", placeholder="password")}}
+                            {{form.password( class="inpt", placeholder="Mot De Passe")}}
 
                             
                         </div>
@@ -55,11 +55,11 @@
                              {% endfor %} 
                         <div class="input-frm">
                             <i class="fas fa-key"></i>
-                            {{form.confirm( class="inpt", placeholder="confirm")}}
+                            {{form.confirm( class="inpt", placeholder="Confirmer Votre Mot De Passe")}}
                         </div>
 
 
-                         {{form.submit(class="btn")}}
+                         {{form.submit(class="btnK")}}
                         </form>
 
                       
