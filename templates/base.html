@@ -25,6 +25,7 @@
         
         <ul>
           <li><a href="/formations">Formations</a></li>
+
           <li><a href="/avis"> Avis</a></li>
           
           
@@ -58,12 +59,39 @@
            
              
            
+
+          <li><a href="/register">cree un compte</a></li>
+          <li> 
+        {%if current_user.is_authenticated%}
+            <a href="/logout">Déconnexion</a>
+        {%else%}
+           <a href="/login">Connexion</a>
+
         {%endif%}
       </li>
-    
-          
-     
+          <li><a href="/apropos">A propos</a></li>
+          <li><a href="/avis"> Avis</a></li>
+          <li>
+            <a href="">
+              {%if current_user.is_authenticated%}
+                  Connecté(<b style="color: green;"> {{current_user.user_name.title()}})</b>
+                  
+              {%else%}
+                   Non connecté
       
+              {%endif%}
+            </a>
+          </li>
+          <li>
+            <a href="/evenements">
+              {%if current_user.is_authenticated%}
+                  Evenements
+                
+      
+              {%endif%}
+            </a>
+          </li>
+
         </ul>
       </div>
     </header>
