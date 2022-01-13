@@ -42,7 +42,10 @@ html {
 	font-family: 'Flash Back - Demo', sans-serif;
 	font-size: 3rem;
 	color: black;
+ 
+  
 }
+
 .nav-bar .nav-list {
 	display: flex;
 	align-items: center;
@@ -88,13 +91,13 @@ html {
 	transition: .3s ease transform;
 }
 .nav-bar .nav-list ul li a {
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: black;
 	display: block;
 	letter-spacing: .15rem;
-	padding: 2rem 3rem;
+	padding: 2rem 2rem;
 }
 .nav-bar .nav-list.open ul {
 	transform: translateY(90px);
@@ -265,6 +268,10 @@ html {
 	flex-direction: column;
     background-color: #eee;
 }
+.about evenement {
+	
+    background-color: rgb(255, 255, 255);
+}
 .about .about-info {
 	text-align: center;
 }
@@ -390,7 +397,8 @@ html {
 	color: white;
 	flex-direction: column;
 	text-align: center;
-	padding: 5rem;
+	padding: 3rem;
+  
 }
 .footer .footer-contact {
 	padding: 20px;
@@ -416,5 +424,3 @@ html {
 
 
  
-
-

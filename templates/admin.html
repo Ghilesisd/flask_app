@@ -6,6 +6,48 @@
             }
         </script>
 
+<style>
+    h1{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .textarea {width: 700px;height: 50px;
+                 padding: 10px; border:3px  indigo;
+                 background-color:rgb(255, 255, 255)
+    }
+    </style>
+
     </head>
 
 
@@ -15,7 +57,7 @@
             <div>
             TITRE : <input   name="titre"  type="text" placeholder="titre de la formation" />
         </div>
-        
+        <input   name="flag"  type="hidden" placeholder="titre de la formation"  value="2" />
         <div>
            CHOISIR UNE CATEGORIE :  <select name="Categorie">
                 <option value="Developpement Web">Developpement Web</option>
@@ -25,10 +67,10 @@
             </select>
             </div>
         <div>
-            DONNER UNE COURTE DESCRIPTION : <textarea name="desc_courte" id="" cols="30" rows="10" placeholder="Une courte description"></textarea>
+            DONNER UNE COURTE DESCRIPTION : <textarea name="desc_courte" id="" class="textarea" cols="30" rows="10" placeholder="Une courte description"></textarea>
         </div>
         <div>
-            DONNER UNE  DESCRIPTION DETAILLEE : <textarea name="desc_long" id="" cols="30" rows="10" placeholder="Une description détaillée"></textarea>
+            DONNER UNE  DESCRIPTION DETAILLEE : <textarea name="desc_long" id="" class="textarea" cols="30" rows="10" placeholder="Une description détaillée"></textarea>
         </div>
         
          <div>

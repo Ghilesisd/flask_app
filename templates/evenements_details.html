@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% block style %} 
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .header {
+      text-align: center;
+      padding: 32px;
+    }
+    
+    .row {
+      display: -ms-flexbox; /* IE 10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE 10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    
+    /* Create two equal columns that sits next to each other */
+    .column {
+      -ms-flex: 50%; /* IE 10 */
+      flex: 50%;
+      padding: 0 4px;
+    }
+    
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+    
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 10px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    .btn:hover {
+      background-color: #ddd;
+    }
+    
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+.img_details{
+    min-height: 60vh;
+    margin-left: 300px;
+    
+    
+    
+  
+    width: 60%;
+  
+    position: center;     
+
+   
+}
+.table_evenements{
+    font-size: 20px;
+    width: 50%;
+	min-height: 20vh;
+    margin-left: 250px;
+	
+    background-color: #eee;
+    
+     
+}
+    </style>
+
+{% endblock %}
+{% block content %}
+
+
+
+
+
+
+
+<section id="about" class="about container evenement">
+    <div class="about-info">
+      <h1 class="about-info-heading">JAVA DEVELOPPERS DAY</h1>
+      <table class="table_evenements" >
+        <tr>
+            <th>Date debut</th>
+            <td>07/01/2022</td>
+           
+        </tr>
+        <tr>
+            <th>Date fin</th>
+            <td>14/07/2022</td>
+            
+        </tr>
+        <tr>
+            <th>Salle</th>
+            <td>Salle 14 M</td>
+            
+        </tr>
+     </table>
+      <p class="about-info-desc">Que ce soit pour le web, le mobile, ou pour proposer des solutions logicielles, le métier de développeur est essentiel pour donner vie à ses idées</p>
+      
+    </div>
+    
+  </section>
+  <section class="img_details">
+
+    <div class="row"> 
+      <div class="column">
+        <img src="/static/evenement12.jpg" style="width:100%">
+       
+        
+     
+      
+      
+      
+    </div>
+    <div class="row"> 
+        <div class="column">
+          <img src="/static/evenement21.jpg" style="width:100%">
+         
+          
+        </div>
+        <div class="column">
+          <img src="/static/evenement22.jpg" style="width:100%">
+       
+        </div>  
+        <div class="column">
+          <img src="/static/evenement22.jpg" style="width:100%">
+       
+        </div>  
+        
+        
+        
+      </div>
+     
+    </section>
+   <!-- <section id="about" class="about container">
+        <div class="about-info">
+          <h1 class="about-info-heading">Rejoindre l'evenement</h1>
+          <a href="/evenements_details"><button>Redirection</button></a>
+          
+          
+        </div>
+        -->
+        
+      </section>
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>      
+
+        
+          
+       
+            
+        
+
+      
+{% endblock %}

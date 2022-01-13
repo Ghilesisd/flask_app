@@ -1,63 +1,25 @@
 {% extends 'base.html' %}
 {% block style %} 
-<link rel="stylesheet" href="/static/avis.css">
+
+   <link rel="stylesheet" href="/static/avis.css">
 
 {% endblock %}
-   
-
-
 {% block content %}
-     
-      <main>
-      
-       
+   <main>
         <!-- Conteneur principal de tout le diaporama -->
         <div class="diapo">
             <h1>Votre Avis Nous Intéresse </h1>
             <!-- Conteneur des "diapos" -->
-            <div class="elements">
-                
-                <!-- Première diapo -->
-                <div class="element ">
-                    
-                    <div class="caption">
-                        
-                        <h2>sonia mihoubi </h2>
-                        <p>"Une école magnifique, des cours professionnels au sens propre du terme, un excellent support technique, et franchement, les mots ne peuvent exprimer mes remerciements et ma gratitude au responsable de l'école." </p>
-                    </div>
-                </div>
-               <!-- Deuxième diapo --> <!--apr nsuprimi hdo-->
-               <div class="element">
-                
-                   <div class="caption">
-                     
-                     <h2>salim bensalah </h2>
-                     <p>"L’ecole travaille avec des formateurs ayant un très bon niveau, sans oublier leur souplesse et leur adaptabilité.on était une équipe formidable, je passe mes salutation a mes collegues"</p>
-                   </div>
-               </div>
-             <!-- Une boucle pour rajouter des commentaires--> 
-                {% for aviss in  lesavis %}
-              
+            <div class="elements"> 
+             <!-- Une boucle pour rajouter des commentaires-->
+                {% for avis in  lesavis %}
                       <div class="element">
-          
                           <div class="caption">
-                           
-                            <!--recupérer le nom et le commentaire -->
-                              <h2> {{aviss.nom}}</h2>
-                              <p>  {{aviss.Commentaire}} </p>
+                              <h2> {{avis.nom}}</h2>   <!--recupérer le nom -->
+                              <p>  {{avis.Commentaire}} </p> <!--récupérer le commentaire-->
                           </div>
-                            
-                                
-                               
-                            
                       </div>
-                          
-                        
-                  
                 {% endfor %}
-             
-              
-               
            </div>
             <!-- Flèches de navigation -->
             <i id="nav-gauche" class="las la-chevron-left"></i>
@@ -65,18 +27,18 @@
             <div class="image">
               <img src="/static/avisclient.jpg" alt="">
             </div>
-            
-        </div>
+       </div>
     </main>
-    <!--btn pour aller au formulaire de cmntr-->
     <div class="btn-cmntra">
       <a href="/cmntr" > laissez votre avis!</a> 
     </div>
-    
-    
-
-     
-       
-   
 {% endblock %}
-  
+<!--"Une école magnifique, des cours professionnels au sens propre du terme, un excellent support technique,
+   et franchement, les mots ne peuvent exprimer mes remerciements et ma gratitude au responsable de l'école." -->
+
+   <!--"L’ecole travaille avec des formateurs ayant un très bon niveau, sans oublier leur souplesse et leur adaptabilité.
+    on était une équipe formidable, je passe mes salutation a mes collegues"-->
+
+<!--" j'ai fait la formation de devlopement web html/css/js et  a la fin de cette formation j'ai pu faire
+       un site vitrine pour ma marque je suis trés contente,
+       merci au professeur ahmed benaissa pour son effort."-->

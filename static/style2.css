@@ -1,22 +1,22 @@
-p{font-size:20px;font-family:cursive;}
-.titre span{
+
+.titre11 span{
 	color:#fb911f;
 	font-size:100px;
 	font-style:italic;
 }
-.titre {
+.titre11 {
 	font-size:50px;
 	color:rgb(36, 35, 35);
 	font-style:italic;
 	
 }
-body {
+.bodyec{
 	font-size:30px;
 	background-image: url("/static/fond.PNG");
 	margin:0;
 	padding:0;
 }
-.container{
+.container1{
 	position:absolute;
 	top:50%;
 	left:50%;
@@ -34,9 +34,12 @@ body {
 	height:200px;
 	background-size:100% 100%;
 	border-radius:50px;
-	box-shadow: 0 15px 50px rgba(0,0,0,.2);
+	box-shadow: 0 15px 50px rgba(194, 196, 192, 0.993);
     float:left;
 	shape-outside:circle();
 	margin:30px;
-	background: url("/static/background.JPG");
+	background-image: url("campus.png");
+    
+    
+  
 }

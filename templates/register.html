@@ -6,18 +6,19 @@
    
 
 {% endblock %}
-   
-    
-    
-    
+
 {% block content %}
    
+   
+    
+    <div class="contenttt">
+    
     <div class="containerK">
         <div class="forms-containerK">
                 <div class="inscriptionK">
-                        <h1>Inscription </h1>
+                        <h1 class="inscr"><span>Inscription:</span>  </h1>
 
-                        <hr>
+                        
                         <form action="/register" method="POST" class="inscr-form">
                             {{form.hidden_tag()}} 
 
@@ -25,8 +26,8 @@
 
                         <div class="input-frm">
                             <i class="fas fa-user"></i>
-                            {{form.nom( class="inpt", placeholder="Nom d'utilisateur")}}
-                           
+                               {{form.nom( class="inpt", placeholder="Nom d'utilisateur")}}
+                          
                             
                             
                         </div>
@@ -37,7 +38,8 @@
                       
                         <div class="input-frm">
                             <i class="fas fa-envelope"></i>
-                            {{form.email( class="inpt", placeholder="Email")}}
+                             {{form.email( class="inpt", placeholder="Email")}} 
+
 
                          
                         </div>
@@ -46,7 +48,7 @@
                     {% endfor %}
                         <div class="input-frm">
                             <i class="fas fa-key"></i>
-                            {{form.password( class="inpt", placeholder="Mot De Passe")}}
+                            {{form.password( class="inpt", placeholder="Mot De Passe")}} 
 
                             
                         </div>
@@ -55,16 +57,33 @@
                              {% endfor %} 
                         <div class="input-frm">
                             <i class="fas fa-key"></i>
-                            {{form.confirm( class="inpt", placeholder="Confirmer Votre Mot De Passe")}}
+                             {{form.confirm( class="inpt", placeholder="Confirmer Votre Mot De Passe")}} 
                         </div>
 
 
-                         {{form.submit(class="btnK")}}
+                         {{form.submit(class="btnK", value='creer votre compte')}}
                         </form>
-
+                         
                       
                     </div>
                 </div>
              
+                <div class="panels-containerK">
+                    
+                    <div class="contentK">
+                        <div class="panel">
+                        <p> Creer votre compte pour pouvoir:</p>
+
+                         <p> vous inscrire dans notre ecole et participer 
+
+                                 a nos evenements </p> 
+
+                    </div>
+                        
+                    </div>
+                    
+                
             </div>
-{% endblock %}
+            </div>
+        </div>
+            {% endblock %}

@@ -90,4 +90,25 @@ select{
   display: inline-block;
   font-size: 20px;
 }
+
+
+.carousel-caption  h5 {
+  font-size: 60px;
+  
+}
+.carousel-caption  p {
+  font-size: 25px;
+  
+}
+.carousel-caption  button {
+  background-color: #ffffff; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  
+}
   

@@ -8,12 +8,13 @@
 {% endblock %}
    
 {% block content %}
-    <div class="containerK">
-        <div class="forms-containerk">
-                <div class="inscriptionk">
-                        <h1>loginhere !!</h1>
-                        <p> merci de completer le formulaire ci-dessous</p>
-                        <hr>
+    <div class="containerl">
+        <div class="forms-containerL">
+                <div class="inscriptionL">
+                       {{msg}}
+                
+                        <h1>Connectez-vous</h1>
+                        
                         <form action="/login" method="POST" class="inscr-formK">
                             {{form.hidden_tag()}} 
 
@@ -21,7 +22,7 @@
 
                       
                       
-                        <div class="input-frmK">
+                        <div class="input-frm">
                             <i class="fas fa-envelope"></i>
                             {{form.email( class="inpt", placeholder="Email")}}
                         </div>
@@ -30,22 +31,32 @@
                                  <pre class="erreur">{{ error }}</pre> 
                             {% endfor %}
 
-                        <div class="input-frmK">
+                        <div class="input-frm">
+                            <i class="fas fa-lock"></i>
                            
                             {{form.password( class="inpt", placeholder="password")}}
                         </div>
                             {% for error in form.password.errors %}
                                  <pre class="erreur">{{ error }}</pre> 
                             {% endfor %}
-                        <div >
+                        <div class="stay" >
                             {{form.stay_loggedin()}}
                              {{form.stay_loggedin.label}}
                             
                         </div>
 
+                       
+                         {{form.submit(class="btnK")}}
+                        
 
-                         {{form.submit(class="btn")}}
+                         <div class="btnK nv">
+                            <a href="/register"> 
+                                creer nouveau compte
+                            </a>
+
+                        </div>
                         </form>
+                        
 
                       
                     </div>

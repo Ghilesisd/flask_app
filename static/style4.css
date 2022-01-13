@@ -1,21 +1,21 @@
-.titre span{
+.titre40 span{
 	color:#fb911f;
 	font-size:100px;
 	font-style:italic;
 }
-.titre {
+.titre40 {
 	font-size:70px;
 	color:rgb(36, 35, 35);
 	font-style:italic;
 	
 }
-body {
+.bodyce {
 	font-size:30px;
 	background-image: url("/static/fond.PNG");
 	margin:0;
 	padding:0;
 }
-.container{
+.container40{
 	position:absolute;
 	top:60%;
 	left:50%;
@@ -29,9 +29,9 @@ body {
 
 }
 
-p{font-size:20px;font-family:cursive;}
 
-img.displayed{
+
+img.displayed12{
 	display:block;
 	margin-left:auto;
 	margin-right:auto;

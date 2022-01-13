@@ -1,31 +1,40 @@
-.menu-bar ul {
-	margin: 0px;
-	padding:  0px;
-	list-style : none;
+.bodyap{  
+	background-image: url("campus.png");
+    
+    
+  
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;  
 }
-.menu-bar ul li {
-	float:left;
-	width:200px;
+.h11{  
+	font-size:90px;
+	font-family:math;
+} 
+.menu-bar a{ 
+  text-decoration:none; 
+  color:black;
+} 
+.container{
+	position:absolute;
+	top:60%;
+    left:50%;
+	transform:translate(-50%,-50%);
+	width: 600px;
+	padding:20px;
+	background:#fff;
+	box-sizing:border-box;
+	border-radius:10px;
+	box-shadow: 0 15px 50px rgba(0,0,0,.2);
+}
+.menu-bar p {
 	height:40px;
-	background-color:black;
-	opacity:.8;
-	line-height:40px;
-	text-align:center;
-	font-size:20px;
-	margin-right:2px;
+	font-size:50px;
 }
-.menu-bar ul li a {
-	text-decoration:none;
-	color:white;
+.menu-bar a:hover {
 	display:block;
+	background-image:url("/static/background.JPG"); 
+ 
 }
-.menu-bar ul li a:hover {
-	background-color:green;
-
-}
-.menu-bar ul li ul li {
-	display:none;
-}
-.menu-bar ul li:hover ul li {
-	display:block;
-}
+ 

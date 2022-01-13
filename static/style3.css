@@ -1,27 +1,24 @@
-.couleur {
+.couleure30 {
 	color:rgb(45, 45, 53);
-       
-	 
-	
 }
-li{
+.paiement li{
     font-size : 30px;
 	
 }
-table{
+.paiement table{
     font-size: 30px;
 	border-collapse:collapse;
 }	
-table,th,td{border:1px solid black;}
-p{font-size:30px;} 
-h1{color:#2b0572; font-style:italic;font-size:40px;}
-.bordure {
+.paiement table,th,td{border:1px solid black;}
+.paiement p{font-size:30px;} 
+.paiement h1{color:#2b0572; font-style:italic;font-size:40px;}
+.bordure30 {
 	margin-left:20px;
 	margin-right:20px;
 	
 	
 }
-th {
+.paiement th {
     font-family: monospace;
     border: thin solid #b3b6b9;
     width: 35%;
@@ -30,7 +27,7 @@ th {
     background-image: url(sky.jpg);
 
 }
-td {
+.paiement td {
 
     font-family: sans-serif;
     border: thin solid #b3b6b9;
@@ -39,18 +36,18 @@ td {
     text-align: center;
     background-color: #ffffff;
 }
-.titre span{
+.titre12 span{
 	color:#fb911f;
 	font-size:100px;
 	font-style:italic;
 }
-.titre {
+.titre12 {
 	font-size:70px;
 	color:rgb(36, 35, 35);
 	font-style:italic;
 	
 }
-body {
+.bodypa {
 	font-size:30px;
 	background-image: url("/static/fond.PNG");
 	margin:0;
@@ -58,7 +55,7 @@ body {
 }
 
 
-.container{
+.container30{
 	position:absolute;
 	top:120%;
 	left:50%;
@@ -71,7 +68,7 @@ body {
 	box-shadow: 0 15px 50px rgba(0,0,0,.2);
 
 }
-.image  {
+.image30  {
     width:300px;
 	height:70px;
 }
