@@ -52,7 +52,8 @@
 
 
     <body>
-        <form action="/formations/" enctype="multipart/form-data" method="POST">
+        <!---->
+        <form action="/" method="POST">
             <h1>AJOUTER UNE FORMATION</h1>
             <div>
             TITRE : <input   name="titre"  type="text" placeholder="titre de la formation" />
@@ -72,16 +73,11 @@
         <div>
             DONNER UNE  DESCRIPTION DETAILLEE : <textarea name="desc_long" id="" class="textarea" cols="30" rows="10" placeholder="Une description détaillée"></textarea>
         </div>
-        
-         <div>
-                    <input type="file" name="pic" />
-                  
-          
-        </div>
         <div>
             <input type="submit" value="Submit" class="btn"/>
             <p>{{titre}}</p>
         </div>
+
         </form>
 
 
